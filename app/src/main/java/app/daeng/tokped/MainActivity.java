@@ -26,14 +26,9 @@ import butterknife.ButterKnife;
 
 public class MainActivity extends AppCompatActivity {
 
-    @BindView(R.id.toolbar_main)
-    Toolbar toolbarMain;
-
-    @BindView(R.id.tab_main)
-    SlidingTabLayout tabMain;
-
-    @BindView(R.id.vpg_main)
-    ViewPager viewPagerMain;
+    @BindView(R.id.toolbar_main) Toolbar toolbarMain;
+    @BindView(R.id.tab_main) SlidingTabLayout tabMain;
+    @BindView(R.id.vpg_main) ViewPager viewPagerMain;
 
     static final int CART_AMOUNT = 4;
 
