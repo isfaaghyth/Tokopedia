@@ -35,7 +35,7 @@ public class MainActivity extends AppCompatActivity {
     @BindView(R.id.vpg_main)
     ViewPager viewPagerMain;
 
-    final int CART_AMOUNT = 4;
+    static final int CART_AMOUNT = 4;
 
     private void initializeComponent() {
         setSupportActionBar(toolbarMain);
@@ -44,8 +44,7 @@ public class MainActivity extends AppCompatActivity {
         tabMain.setViewPager(viewPagerMain);
     }
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    @Override protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
@@ -53,8 +52,7 @@ public class MainActivity extends AppCompatActivity {
         initializeComponent();
     }
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
+    @Override public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater menuInflater = getMenuInflater();
         menuInflater.inflate(R.menu.main_menu, menu);
 
@@ -64,8 +62,7 @@ public class MainActivity extends AppCompatActivity {
         return super.onCreateOptionsMenu(menu);
     }
 
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
+    @Override public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case R.id.mn_cart:
                 Toast.makeText(this, "Ada " + CART_AMOUNT + " Belanjaan di Keranjang.", Toast.LENGTH_SHORT).show();
